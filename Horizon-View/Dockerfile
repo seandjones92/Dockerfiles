@@ -8,4 +8,3 @@ RUN yum install -y freerdp libxkbfile gtk2 libXScrnSaver libXtst gdk-pixbuf2 wge
     env TERM=dumb VMWARE_EULAS_AGREED=yes ./VMware-Horizon-Client*.bundle --console --required
 
 CMD /usr/bin/vmware-view 
-    
