@@ -5,6 +5,11 @@ RUN yum install -y freerdp libxkbfile gtk2 libXScrnSaver libXtst gdk-pixbuf2 wge
     cd ~ &&\
     wget https://download3.vmware.com/software/view/viewclients/CART19FQ3/VMware-Horizon-Client-4.9.0-9507999.x64.bundle &&\
     chmod 755 VMware-Horizon-Client*.bundle &&\
-    env TERM=dumb VMWARE_EULAS_AGREED=yes ./VMware-Horizon-Client*.bundle --console --required
+    env TERM=dumb VMWARE_EULAS_AGREED=yes ./VMware-Horizon-Client*.bundle --console --required &&\
+    useradd -m viewuser
 
-CMD /usr/bin/vmware-view 
+WORKDIR /home/viewuser
+
+USER viewuser
+
+CMD /usr/bin/vmware-view
