@@ -11,4 +11,11 @@ RUN dnf groupinstall -y 'Development Tools' &&\
     cd ~ &&\
     rm -rf ~/dlang ~/onedrive &&\
     dnf group remove -y 'Development Tools' &&\
-    dnf clean all
+    dnf clean all &&\
+    useradd -m onedriveuser
+
+WORKDIR /home/onedriveuser
+
+USER onedriveuser
+
+CMD [ "/usr/local/bin/onedrive" ]
