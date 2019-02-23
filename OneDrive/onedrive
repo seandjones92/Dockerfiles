@@ -1,7 +1,0 @@
-#!/bin/bash
-
-if [ "$@" == "" ]; then
-	podman run --privileged=true -it --rm -v /home/${USER}:/home/user:Z sdj92/onedrive
-elif [ "$@" == "--synchronize" ]; then
-	podman run --privileged=true -it --rm -v /home/${USER}:/home/user:Z sdj92/onedrive onedrive --synchronize
-fi
