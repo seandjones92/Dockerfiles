@@ -1,5 +1,5 @@
 # docker build -t vra-postgres-95 .
-# docker run -d --name vra-postgres -v $HOME/Logs/:/mnt/ vra-postgres-95
+# docker run -d --name vra-postgres -v $HOME/Logs/:/var/lib/postgresql/backups vra-postgres-95
 
 # TODO: add scripts to check DBs for known issues
 
