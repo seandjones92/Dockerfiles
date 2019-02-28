@@ -7,7 +7,7 @@ ARG userid=1000
 
 RUN dnf update -y && \
     dnf install -y \
-    sudo passwd wget man-db && \
+    sudo passwd wget man-db hostname && \
     useradd -m ${username} -u ${userid} -U && \
     usermod -aG wheel ${username} && \
     passwd -d ${username} && \
