@@ -20,6 +20,6 @@ else
     shift $((OPTIND - 1))
     BACKUPSHORTNAME=$(echo $bakdir | rev | cut -d\/ -f1 | rev)
     echo "Restoring $BACKUPSHORTNAME to $dbname"
-    psql -c "CREATE DATABASE \"$dbname\""
+    psql -c "CREATE DATABASE \"$dbname\"" # TODO: check if dbname already exists, if so error and quit
     pg_restore -d $dbname $bakdir
 fi
