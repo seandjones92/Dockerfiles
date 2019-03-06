@@ -2,6 +2,8 @@
 # docker run -d --name vra-postgres -v $HOME/Logs/:/var/lib/postgresql/backups vra-postgres-95
 
 # TODO: add scripts to check DBs for known issues
+# TODO: https://hub.docker.com/_/postgres - PGDATA
+#       -v $HOME/Logs:/var/lib/postgresql/backups -e PGDATA /var/lib/postgresql/data/pgdata
 
 FROM postgres:9.5
 
