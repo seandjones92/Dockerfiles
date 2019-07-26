@@ -1,3 +1,4 @@
+# docker run -d --name libreoffice --hostname libreoffice-container -e DISPLAY=$DISPLAY -v /tmp/.X11-unix/:/tmp/.X11-unix/ -v $HOME/Documents:/home/libreoffice/Documents libreoffice
 FROM centos:7
 
 RUN yum update -y && \

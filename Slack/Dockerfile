@@ -1,3 +1,4 @@
+# docker run -d --name slack --hostname slack-container -e DISPLAY=$DISPLAY -v /tmp/.X11-unix/:/tmp/.X11-unix/ slack
 FROM centos:7
 
 RUN yum update -y && \
