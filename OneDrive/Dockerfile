@@ -6,6 +6,8 @@ RUN dnf groupinstall -y 'Development Tools' &&\
     cd ~ &&\
     git clone https://github.com/abraunegg/onedrive.git &&\
     cd onedrive &&\
+    ./configure &&\
+    make clean &&\
     make &&\
     make install &&\
     cd ~ &&\
